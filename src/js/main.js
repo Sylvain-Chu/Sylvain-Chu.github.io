@@ -27,7 +27,6 @@ $(document).ready(function () {
     $("header").toggleClass("toggle");
   });
 
-
   // smooth scrolling
   $('a[href*="#"]').on("click", function (e) {
     e.preventDefault();
@@ -41,7 +40,26 @@ $(document).ready(function () {
     );
   });
 
+  // // Skills Bars
+  // $(".skill-percent").each(function () {
+  //   $(this).animate(
+  //     {
+  //       width: $(this).attr("data-percent"),
+  //     },
+  //     "fast"
+  //   );
+  // });
 
+  skillBoxs = document.querySelectorAll(".skillBox");
+  skillBars = document.querySelectorAll(".skillBar");
 
-  
+  skillBars.forEach((skillBar) => {
+    let percentage = skillBar.dataset.percentage;
+    skillBar.style.background =
+      "linear-gradient(90deg, rgb(245 223 77) 0%, rgb(245 223 77) " +
+      percentage +
+      "%, rgb(35 38 38) " +
+      percentage +
+      "%, rgb(35 38 38) 100%)";
+  });
 });

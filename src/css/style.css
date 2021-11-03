@@ -1,3 +1,4 @@
+/* ALL */
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap");
 
 :root {
@@ -25,6 +26,8 @@ html {
   overflow-x: hidden;
 }
 
+/* Scrollbar */
+
 html::-webkit-scrollbar {
   width: 1.4rem;
 }
@@ -36,6 +39,8 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
   background: var(--yellow);
 }
+
+/* Global */
 
 body {
   background: #111;
@@ -79,6 +84,8 @@ section {
 .heading span {
   color: var(--yellow);
 }
+
+/* Header */
 
 header {
   position: fixed;
@@ -177,6 +184,8 @@ header .navbar ul li a:hover {
   padding: 1rem 0;
 }
 
+/* ABOUT */
+
 .about .row {
   display: flex;
   align-items: center;
@@ -190,8 +199,6 @@ header .navbar ul li a:hover {
   padding: 2rem 1rem;
   padding-left: 6rem;
 }
-
-
 
 .about .row .info h3 {
   font-size: 2rem;
@@ -213,11 +220,11 @@ header .navbar ul li a:hover {
 }
 
 .about .row .counter .title {
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 3rem;
-    padding-bottom: 2rem;
-  }
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 3rem;
+  padding-bottom: 2rem;
+}
 
 .about .row .counter .box {
   width: 20rem;
@@ -237,6 +244,70 @@ header .navbar ul li a:hover {
   color: #fff;
 }
 
+.skillsBoxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem 0;
+  padding-left: 3rem;
+}
+
+.skills div:nth-child(0) {
+  display: flex;
+  justify-content: center;
+}
+
+.skillBoxContainer {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.skillBox {
+  transform : scale(1.5,1.5); 
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 10px;
+  border-radius: 2px;
+  width: 300px;
+  height: fit-content;
+  margin: 20px;
+}
+
+.skillBox .title {
+  font-size: 200%;
+  justify-content: center;
+}
+
+.skillBox .infos {
+  transition: max-height 0.5s ease-in-out;
+}
+
+.skillBox .infos p {
+  padding: 5px 5px 5px 5px;
+}
+
+.skillBox p {
+  display: inline-flex;
+  width: 100%;
+  flex-flow: wrap;
+}
+.skillBar {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 190px;
+  margin-left: 5px;
+  margin-left: auto;
+  margin-right: 10px;
+  border-radius: 20px;
+  border: solid 1px #2c3133;
+}
+
+/* EDUCATION */
 
 .education .box-container {
   display: flex;
@@ -279,6 +350,7 @@ header .navbar ul li a:hover {
   font-size: 1.4rem;
   color: #eee;
   padding: 1rem 0;
+  text-align: justify;
 }
 
 .education .box-container .box i {
@@ -294,6 +366,8 @@ header .navbar ul li a:hover {
   color: #fff;
   background: var(--yellow);
 }
+
+/* PORTFOLIO */
 
 .portfolio .box-container {
   display: flex;
@@ -321,6 +395,8 @@ header .navbar ul li a:hover {
 .portfolio .box-container .box:hover img {
   transform: scale(1.2);
 }
+
+/* CONTACT */
 
 .contact .row {
   display: flex;
@@ -369,9 +445,9 @@ header .navbar ul li a:hover {
 }
 
 .contact .row .content a {
-    text-transform: none;
-    color: white;
-  }
+  text-transform: none;
+  color: white;
+}
 
 .contact .row .content .info h3 {
   display: flex;
@@ -387,6 +463,8 @@ header .navbar ul li a:hover {
   color: var(--yellow);
 }
 
+/* TOTOP */
+
 .top {
   color: var(--yellow);
   font-size: 2rem;
@@ -396,7 +474,12 @@ header .navbar ul li a:hover {
   z-index: 100;
 }
 
-/* media queries  */
+.top:hover {
+  color: #ffdd00;
+  cursor: pointer;
+}
+
+/* RESPONSIVE  */
 
 @media (max-width: 1200px) {
   html {

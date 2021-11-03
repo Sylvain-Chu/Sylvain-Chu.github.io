@@ -40,16 +40,6 @@ $(document).ready(function () {
     );
   });
 
-  // // Skills Bars
-  // $(".skill-percent").each(function () {
-  //   $(this).animate(
-  //     {
-  //       width: $(this).attr("data-percent"),
-  //     },
-  //     "fast"
-  //   );
-  // });
-
   skillBoxs = document.querySelectorAll(".skillBox");
   skillBars = document.querySelectorAll(".skillBar");
 

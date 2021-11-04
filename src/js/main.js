@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
   //Button to top smooth
   const btn = document.querySelector(".top");
   btn.addEventListener("click", () => {
@@ -9,11 +9,24 @@ $(document).ready(function () {
     });
   });
 
+  //Skills
+  skillBoxs = document.querySelectorAll(".skillBox");
+  skillBars = document.querySelectorAll(".skillBar");
+
+  skillBars.forEach((skillBar) => {
+    let percentage = skillBar.dataset.percentage;
+    skillBar.style.background =
+      "linear-gradient(90deg, rgb(245 223 77) 0%, rgb(245 223 77) " +
+      percentage +
+      "%, rgb(35 38 38) " +
+      percentage +
+      "%, rgb(35 38 38) 100%)";
+  });
+
   //Hide class top
   $(window).on("scroll load", function () {
     $("#menu").removeClass("fa-times");
     $("header").removeClass("toggle");
-
     if ($(window).scrollTop() > 0) {
       $(".top").show();
     } else {
@@ -22,9 +35,11 @@ $(document).ready(function () {
   });
 
   //Responsive menu
-  $("#menu").click(function () {
-    $(this).toggleClass("fa-times");
-    $("header").toggleClass("toggle");
+  let menu = document.querySelector("#menu");
+  let header = document.querySelector("header");
+
+  menu.addEventListener("click", function () {
+    header.classList.toggle("toggle");
   });
 
   // smooth scrolling
@@ -38,18 +53,5 @@ $(document).ready(function () {
       500,
       "linear"
     );
-  });
-
-  skillBoxs = document.querySelectorAll(".skillBox");
-  skillBars = document.querySelectorAll(".skillBar");
-
-  skillBars.forEach((skillBar) => {
-    let percentage = skillBar.dataset.percentage;
-    skillBar.style.background =
-      "linear-gradient(90deg, rgb(245 223 77) 0%, rgb(245 223 77) " +
-      percentage +
-      "%, rgb(35 38 38) " +
-      percentage +
-      "%, rgb(35 38 38) 100%)";
   });
 });

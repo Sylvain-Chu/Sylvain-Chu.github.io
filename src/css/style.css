@@ -14,6 +14,7 @@
   outline: none;
   border: none;
   transition: all 0.2s linear;
+  scroll-behavior: smooth;
 }
 
 *::selection {
@@ -478,6 +479,9 @@ header .navbar ul li a:hover {
   color: #ffdd00;
   cursor: pointer;
 }
+
+
+
 
 /* RESPONSIVE  */
 

@@ -23,16 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
       "%, rgb(35 38 38) 100%)";
   });
 
-  //Hide class top
-  $(window).on("scroll load", function () {
-    $("#menu").removeClass("fa-times");
-    $("header").removeClass("toggle");
-    if ($(window).scrollTop() > 0) {
-      $(".top").show();
-    } else {
-      $(".top").hide();
-    }
-  });
 
   //Responsive menu
   let menu = document.querySelector("#menu");
@@ -42,16 +32,5 @@ document.addEventListener("DOMContentLoaded", function () {
     header.classList.toggle("toggle");
   });
 
-  // smooth scrolling
-  $('a[href*="#"]').on("click", function (e) {
-    e.preventDefault();
 
-    $("html, body").animate(
-      {
-        scrollTop: $($(this).attr("href")).offset().top,
-      },
-      500,
-      "linear"
-    );
-  });
 });

@@ -386,12 +386,14 @@ header .navbar ul li a:hover {
 }
 
 .portfolio .box-container .box {
-    height: 20rem;
-    width: 26rem;
+    height: 27rem;
+    width: 45rem;
     border-radius: 1rem;
     margin: 2rem;
     overflow: hidden;
     cursor: pointer;
+    position: relative;
+    z-index: 9999;
 }
 
 .portfolio .box-container .box img {
@@ -400,8 +402,41 @@ header .navbar ul li a:hover {
     object-fit: cover;
 }
 
+.portfolio .box-container .box h2 {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 16%;
+    color: rgba(51, 51, 51, 0.793);
+    font-size: 20px;
+    border-radius: 1rem;
+    padding: 2px;
+    z-index: 99;
+    background-color: #f5df4dc5;
+    padding: 6px;
+    border-radius: 1rem;
+}
+
+.portfolio .box-container .box p {
+    display: none;
+    position: absolute;
+    text-align: justify;
+    font-size: 14px;
+    font-weight: bold;
+    width: 30rem;
+    top: 40%;
+    left: 16%;
+    color: rgba(51, 51, 51, 0.793);
+    z-index: 9999;
+    background-color: #f5df4dc5;
+    padding: 6px;
+    border-radius: 1rem;
+}
+
 .portfolio .box-container .box:hover img {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    filter: blur(2px);
+    filter: grayscale(100%);
 }
 
 
@@ -548,6 +583,3 @@ a.anchor {
     position: relative;
     visibility: hidden;
 }
-
-
-/* test */

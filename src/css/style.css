@@ -467,7 +467,7 @@ header .navbar ul li a:hover {
 .contact .row form .box {
     padding: 1.5rem;
     margin: 1rem 0;
-    background: #3333;
+    background: rgba(51, 51, 51, 0.634);
     color: #fff;
     text-transform: none;
     font-size: 1.7rem;

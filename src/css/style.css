@@ -407,12 +407,12 @@ header .navbar ul li a:hover {
     position: absolute;
     top: 20%;
     left: 16%;
-    color: rgba(51, 51, 51, 0.793);
+    color: #f5df4dc5;
     font-size: 20px;
     border-radius: 1rem;
     padding: 2px;
     z-index: 99;
-    background-color: #f5df4dc5;
+    background-color: rgba(51, 51, 51, 0.793);
     padding: 6px;
     border-radius: 1rem;
 }
@@ -426,9 +426,9 @@ header .navbar ul li a:hover {
     width: 30rem;
     top: 40%;
     left: 16%;
-    color: rgba(51, 51, 51, 0.793);
+    color: #f5df4dc5;
     z-index: 9999;
-    background-color: #f5df4dc5;
+    background-color: rgba(51, 51, 51, 0.793);
     padding: 6px;
     border-radius: 1rem;
 }

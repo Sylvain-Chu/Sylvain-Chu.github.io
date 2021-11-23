@@ -135,6 +135,8 @@ section {
     padding: 1rem;
 }
 
+
+/* 
 .btn {
     padding: 0.7rem 3rem;
     background: #333;
@@ -154,6 +156,43 @@ section {
     background: #333;
     transition: ease-in-out;
     background: linear-gradient(90deg, #f5df4d, #e7a52a);
+} */
+
+.btn {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #f8efb0;
+    outline: none;
+    transition: 1s ease-in-out;
+    border-radius: 50px;
+}
+
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+}
+
+.btn:hover {
+    transition: 1s ease-in-out;
+    background: #faeb8dde;
+}
+
+.btn:hover svg {
+    stroke-dashoffset: -480;
+}
+
+.btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
 }
 
 .heading {
@@ -286,8 +325,15 @@ header .navbar ul li a:hover {
     padding-left: 6rem;
 }
 
+.about .row .info h2 {
+    font-size: 3.9rem;
+    color: var(--yellow);
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
 .about .row .info h3 {
-    font-size: 2rem;
+    font-size: 2.3rem;
     color: var(--yellow);
     padding: 1rem 0;
     font-weight: normal;
@@ -298,36 +344,29 @@ header .navbar ul li a:hover {
     padding: 0 0.5rem;
 }
 
-.about .row .counter {
+.about .row .interest {
     flex: 1 1 48rem;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
 }
 
-.about .row .counter .title {
-    text-transform: uppercase;
-    color: #fff;
-    font-size: 3rem;
-    padding-bottom: 2rem;
-}
-
-.about .row .counter .box {
-    width: 20rem;
-    background: #222;
-    text-align: center;
-    padding: 2rem;
-    margin: 2rem;
-}
-
-.about .row .counter .box span {
-    font-size: 4rem;
+.about .row .interest h2 {
+    font-size: 3.9rem;
     color: var(--yellow);
+    padding: 1rem 0;
+    font-weight: normal;
 }
 
-.about .row .counter .box h3 {
-    font-size: 2rem;
-    color: #fff;
+.about .row .interest h3 {
+    font-size: 2.3rem;
+    color: var(--yellow);
+    padding: 1rem 0;
+    font-weight: normal;
+}
+
+.about .row .interest h3 span {
+    color: #eee;
+    padding: 0 0.5rem;
 }
 
 .skillsBoxes {
@@ -541,6 +580,10 @@ header .navbar ul li a:hover {
     padding: 2rem;
     margin: 2rem;
     margin-bottom: 4rem;
+}
+
+.contact .row form .btn {
+    color: white;
 }
 
 .contact .row form .box {

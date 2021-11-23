@@ -12,9 +12,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="src/css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-    <link rel="icon" sizes="192x192" href="https://static.parastorage.com/client/pfavico.ico">
+    <link rel="icon" href="https://static.parastorage.com/client/pfavico.ico">
 
 </head>
 
@@ -52,27 +51,34 @@
 
 
         <a class="anchor" id="home"></a>
-        <section class="home">
+        <section class="home" id="homes">
 
             <h3>HI THERE !</h3>
             <h1>I'm <span>Sylvain Churlet</span></h1>
             <p>
                 I'm a 2nd year student in Annecy's university as a programming learner. I am creative, dynamic and innovative. I’m really interested in back end, web development and database !
             </p>
-            <a href="" target="_blank" class="buttonCV">
-                <button class="btn"><span>Download my resume<i class="fas fa-download"></i></span></button>
+            <a href="src/others/ChurletSylvainCV.pdf" target="_blank">
+                <button class="btn">
+                <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                </svg>
+                <span>Download my resume</span>
+                </button>
             </a>
 
         </section>
 
         <a class="anchor" id="about"></a>
-        <section class="about">
+        <section class="about" id="abouts">
 
             <h1 class="heading"> <span>About</span> me </h1>
 
             <div class="row">
 
                 <div class="info">
+                    <h2><i class="fas fa-book-open"></i> Informations </h2>
                     <h3> <span> Birthday : </span> January 13, 2001 </h3>
                     <h3> <span> Age : </span> 20 years old</h3>
                     <h3> <span> Adress : </span> 3 All. Louis de Broglie </h3>
@@ -83,14 +89,12 @@
 
                 </div>
 
-                <div class="info">
-                    <h3> <span> Birthday : </span> January 13, 2001 </h3>
-                    <h3> <span> Age : </span> 20 years old</h3>
-                    <h3> <span> Adress : </span> 3 All. Louis de Broglie </h3>
-                    <h3> <span> City : </span> Annecy </h3>
-                    <h3> <span> Country : </span> France </h3>
-                    <h3> <span> Mail : </span> churlet.sylvain@gmail.com </h3>
-                    <h3> <span> Phone number : </span> +33 (0)7 83 25 60 72 </h3>
+                <div class="interest">
+
+                    <h2><i class="fas fa-running"></i> Interest </h2>
+                    <h3> <span> Sports : </span> Rink Hockey (15 yeas), badminton (University sport)</h3>
+                    <h3> <span> Music : </span> Clarinet (6 years) </h3>
+                    <h3> <span> Reading : </span> Fantasy (Andrew Fukuda), Science Fiction : (James Dashner)</h3>
 
                 </div>
 
@@ -103,7 +107,7 @@
         </section>
 
         <a class="anchor" id="skills"></a>
-        <section class="skills">
+        <section class="skills" id="skillss">
             <h1 class="heading">My <span>skills</span></h1>
 
             <div class="skillsBoxes">
@@ -138,7 +142,7 @@
         </section>
 
         <a class="anchor" id="education"></a>
-        <section class="education">
+        <section class="education" id="educations">
 
             <h1 class="heading">My <span>Experience</span> </h1>
 
@@ -172,7 +176,7 @@
         </section>
 
         <a class="anchor" id="portfolio"></a>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolios">
 
             <h1 class="heading"> My <span>Portfolio</span> </h1>
 
@@ -223,7 +227,7 @@
         </section>
 
         <a class="anchor" id="contact"></a>
-        <section class="contact">
+        <section class="contact" id="contacts">
 
             <h1 class="heading"> <span>Contact</span> me </h1>
 
@@ -249,7 +253,7 @@
                     <input type="email" placeholder="email" class="box">
                     <input type="text" placeholder="project" class="box">
                     <textarea name="" id="" cols="30" rows="10" class="box message" placeholder="message"></textarea>
-                    <button type="submit" class="btn"> send <i class="fas fa-paper-plane"></i> </button>
+                    <button type="submit" class="btn"> Send <i class="fas fa-paper-plane"></i> </button>
                 </form>
 
             </div>

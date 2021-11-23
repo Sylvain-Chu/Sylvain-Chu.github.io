@@ -54,8 +54,44 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+    //Scrool par page
+
+
+    var numDiv = 0; //numéro de la div
+    //let sections = document.querySelectorAll('section')
+    var sections = [document.getElementById("homes"), document.getElementById("abouts"),
+        document.getElementById("skillss"), document.getElementById("educations"),
+        document.getElementById("portfolios"), document.getElementById("contacts")
+    ];
+
+    //console.log(sections.length)
+
+    // var dy = [];
+    // dy[0] = 0;
+
+    // for (var i = 2; i <= sections.length; i++)
+    //     dy[i] = sections[i - 1].offsetTop - sections[0].offsetTop;
+
+    // window.addEventListener("wheel", mouseWheelHandler);
+
+    // function mouseWheelHandler(e) {
+    //     //e.preventDefault();
+    //     var delta = e.deltaY;
+    //     var doc = document.body; // Safari, Edge
+    //     var html = document.documentElement; // Chrome, Firefox, IE and Opera
+    //     if (delta > 0) numDiv++;
+    //     else numDiv--;
+    //     if (numDiv < 1) numDiv = 1;
+    //     if (numDiv > sections.length) numDiv = sections.length;
+
+    //     for (var j = 1; j <= sections.length; j++)
+    //         if (numDiv == j) html.scrollTop = doc.scrollTop = dy[j];
+    // }
+
 });
 
+
+//FONCTIONS
 function hoverEffect(element1, element2, element3) {
     let box = document.getElementById(element1);
     let title = document.getElementById(element2);

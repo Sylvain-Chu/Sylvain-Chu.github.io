@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            background-color: #1C1E2B;
+            overflow: hidden;
+        }
+        
+        div {
+            /* position: absolute; */
+            left: 0;
+            width: 100%;
+            font-size: 3em;
+            text-align: center;
+        }
+        
+        #div1 {
+            top: 20px;
+            height: 400px;
+            background-color: red;
+        }
+        
+        #div2 {
+            top: 440px;
+            height: 400px;
+            background-color: #00ff00;
+        }
+        
+        #div3 {
+            top: 860px;
+            height: 1000px;
+            background-color: blue;
+        }
+        
+        #div4 {
+            top: 1880px;
+            height: 1000px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">div 1</div>
+    <div id="div2">div 2</div>
+    <div id="div3">div 3</div>
+    <div id="div4">div 4</div>
+    <script>
+        var numDiv = 1; //numéro de la div
+        var div = [document.getElementById("div1"), document.getElementById("div2"), document.getElementById("div3"), document.getElementById("div4")];
+
+        var dy = [];
+        dy[1] = 0;
+
+        for (var i = 2; i <= div.length; i++)
+            dy[i] = div[i - 1].offsetTop - div[0].offsetTop;
+        window.addEventListener("wheel", mouseWheelHandler);
+
+        function mouseWheelHandler(e) {
+            //e.preventDefault();
+            var delta = e.deltaY;
+            var doc = document.body; // Safari, Edge
+            var html = document.documentElement; // Chrome, Firefox, IE and Opera
+            if (delta > 0) numDiv++;
+            else numDiv--;
+            if (numDiv < 1) numDiv = 1;
+            if (numDiv > div.length) numDiv = div.length;
+
+            for (var j = 1; j <= div.length; j++)
+                if (numDiv == j) html.scrollTop = doc.scrollTop = dy[j];
+        }
+    </script>
+</body>
+
+</html>

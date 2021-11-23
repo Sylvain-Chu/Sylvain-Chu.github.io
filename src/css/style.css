@@ -28,6 +28,83 @@ html {
 }
 
 
+/* Loader*/
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    top: 47%;
+    position: relative;
+    border: 4px solid #fff;
+    animation: loader 2s infinite ease;
+    z-index: 9999;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: var(--yellow);
+    animation: loader-inner 2s infinite ease-in;
+}
+
+.fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }
+    25% {
+        height: 0%;
+    }
+    50% {
+        height: 100%;
+    }
+    75% {
+        height: 100%;
+    }
+    100% {
+        height: 0%;
+    }
+}
+
+
 /* Scrollbar */
 
 html::-webkit-scrollbar {
@@ -74,7 +151,9 @@ section {
 }
 
 .btn:hover {
-    background: var(--yellow);
+    background: #333;
+    transition: ease-in-out;
+    background: linear-gradient(90deg, #f5df4d, #e7a52a);
 }
 
 .heading {
@@ -328,7 +407,7 @@ header .navbar ul li a:hover {
 }
 
 .education .box-container .box {
-    width: 35rem;
+    width: 50rem;
     margin: 4rem 1rem;
     padding-left: 4rem;
     border-left: 0.2rem solid #fff;
@@ -356,7 +435,7 @@ header .navbar ul li a:hover {
 }
 
 .education .box-container .box p {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
     color: #eee;
     padding: 1rem 0;
     text-align: justify;

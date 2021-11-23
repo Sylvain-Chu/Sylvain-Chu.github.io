@@ -1,7 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+    //Loader
+    document.querySelector('.loader-wrapper').style.display = 'block'
+    document.querySelector('.container').style.display = 'none'
+
+    window.addEventListener("load", function() {
+        document.querySelector('.loader-wrapper').classList.add('fade-out');
+        document.querySelector('.container').style.display = 'block'
+    })
+
+
+
     //Button to top smooth
-    const btn = document.querySelector(".top");
-    btn.addEventListener("click", () => {
+    const btnToTop = document.querySelector(".top");
+    btnToTop.addEventListener("click", () => {
         window.scrollTo({
             top: 0,
             left: 0,
@@ -33,11 +45,15 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 
+
     //Portfolio image 
     hoverEffect("box1", "title1", "description1");
     hoverEffect("box2", "title2", "description2");
     hoverEffect("box3", "title3", "description3");
     hoverEffect("box4", "title4", "description4");
+
+
+
 });
 
 function hoverEffect(element1, element2, element3) {

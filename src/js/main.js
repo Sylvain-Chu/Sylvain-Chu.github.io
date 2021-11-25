@@ -55,14 +55,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     //Scrool par page
-
-
-    var numDiv = 0; //numéro de la div
+    // var numDiv = 0; //numéro de la div
     //let sections = document.querySelectorAll('section')
-    var sections = [document.getElementById("homes"), document.getElementById("abouts"),
-        document.getElementById("skillss"), document.getElementById("educations"),
-        document.getElementById("portfolios"), document.getElementById("contacts")
-    ];
+    // var sections = [document.getElementById("homes"), document.getElementById("abouts"),
+    //     document.getElementById("skillss"), document.getElementById("educations"),
+    //     document.getElementById("portfolios"), document.getElementById("contacts")
+    // ];
 
     //console.log(sections.length)
 

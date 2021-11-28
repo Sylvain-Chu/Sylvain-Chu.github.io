@@ -39,11 +39,17 @@ document.addEventListener("DOMContentLoaded", function() {
     //Responsive menu
     let menu = document.querySelector("#menu");
     let header = document.querySelector("header");
+    let lienMenu = document.querySelectorAll("li");
 
     menu.addEventListener("click", function() {
         header.classList.toggle("toggle");
     });
 
+    lienMenu.forEach(element => {
+        element.addEventListener("click", function() {
+            header.classList.toggle("toggle");
+        })
+    });
 
 
     //Portfolio image 
@@ -51,6 +57,8 @@ document.addEventListener("DOMContentLoaded", function() {
     hoverEffect("box2", "title2", "description2");
     hoverEffect("box3", "title3", "description3");
     hoverEffect("box4", "title4", "description4");
+
+
 
 
 

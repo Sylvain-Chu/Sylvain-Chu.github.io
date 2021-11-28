@@ -215,7 +215,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 9000;
     height: 100%;
     width: 35rem;
     background: #1a1a1a;
@@ -247,6 +247,10 @@ header .user .post {
 
 header .navbar {
     width: 100%;
+}
+
+.navbar li img {
+    width: 40%;
 }
 
 header .navbar ul {
@@ -513,7 +517,7 @@ header .navbar ul li a:hover {
     overflow: hidden;
     cursor: pointer;
     position: relative;
-    z-index: 9999;
+    z-index: 900;
 }
 
 .portfolio .box-container .box img {

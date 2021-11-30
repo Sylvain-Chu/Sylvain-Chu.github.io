@@ -127,6 +127,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
                 music.play();
                 music.loop = true;
+                music.volume = 0.1
+
             }
         }
     })

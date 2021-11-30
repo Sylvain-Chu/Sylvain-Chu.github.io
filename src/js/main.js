@@ -94,6 +94,45 @@ document.addEventListener("DOMContentLoaded", function() {
     //         if (numDiv == j) html.scrollTop = doc.scrollTop = dy[j];
     // }
 
+
+    //on est pas des bg nous
+
+    const music = new Audio("src/others/uwu.mp3")
+    const kya = ['k', 'y', 'a'];
+    var textType = []
+    let verif = true
+
+    document.addEventListener("keydown", function(event) {
+
+        console.log(event.key)
+
+        if (event.key != 'k' && event.key != 'y' && event.key != 'a') {
+            textType = []
+            verif = false
+        }
+
+        if (event.key == 'k') {
+            textType[0] = 'k'
+        }
+
+        if (event.key == 'y' && textType[0] == 'k') {
+            textType[1] = 'y'
+        }
+
+        if (event.key == 'a' && textType[1] == 'y') {
+            textType[2] = 'a'
+            if (verif && textType.length == 3) {
+                let pp = document.getElementById("profilpicture")
+                pp.src = "src/img/Sylchien.jpg"
+
+                music.play();
+                music.loop = true;
+            }
+        }
+    })
+
+
+
 });
 
 

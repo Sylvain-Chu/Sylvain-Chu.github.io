@@ -19,7 +19,7 @@
 </head>
 
 <body>
-
+    <audio src="src/others/uwu.mp3" id="audio"></audio>
     <div class="loader-wrapper">
         <span class="loader"><span class="loader-inner"></span></span>
     </div>
@@ -29,7 +29,7 @@
         <header>
 
             <div class="user">
-                <img src="src/img/me.jpg" alt="me">
+                <img src="src/img/me.jpg" alt="me" id="profilpicture">
                 <h3 class="name">Sylvain Churlet</h3>
                 <p class="post">Developer</p>
             </div>
@@ -60,12 +60,9 @@
             <p>
                 I'm a 2nd year student in Annecy's university as a programming learner. I am creative, dynamic and innovative. I’m really interested in back end, web development and database !
             </p>
-            <a href="src/others//ChurletSylvainCVAnglais.pdf" target="_blank">
+            <a href="src/others//ChurletSylvainCVAnglais.pdf" target="_blank" class="btn">
                 <button class="btn">
-                <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                </svg>
+                
                 <span>Download my resume</span>
                 </button>
             </a>
@@ -113,31 +110,87 @@
             <h1 class="heading">My <span>skills</span></h1>
 
             <div class="skillsBoxes">
-
                 <div class='skillBox'>
                     <p class='title'>Databases</p>
                     <div class='infos'>
-                        <p>MCD - MLD<span data-percentage='65' class='skillBar'></span></p>
-                        <p>Mysql<span data-percentage='80' class='skillBar'></span></p>
-                        <p>PgSQL<span data-percentage='70' class='skillBar'></span></p>
+                        <div class="infobox">
+                            <div>
+                                <p>MCD - MLD</p>
+                            </div>
+                            <div>
+                                <p><span data-percentage='65' class='skillBar'></span></p>
+                            </div>
+                        </div>
+                        <div class="infobox">
+                            <div>
+                                <p>Mysql</p>
+                            </div>
+                            <div>
+                                <p><span data-percentage='80' class='skillBar'></span></p>
+                            </div>
+                        </div>
+                        <div class="infobox">
+                            <div>
+                                <p>PgSQL</p>
+                            </div>
+                            <div>
+                                <p><span data-percentage='70' class='skillBar'></p></div>
+                        </div>
                     </div>
                 </div>
-
                 <div class='skillBox'>
                     <p class='title'>Web</p>
                     <div class='infos'>
-                        <p>HTML - CSS<span data-percentage='75' class='skillBar'></span></p>
-                        <p>Javascript<span data-percentage='85' class='skillBar'></span></p>
-                        <p>PHP<span data-percentage='90' class='skillBar'></span></p>
+                        <div class="infobox">
+                            <div><p>HTML - CSS</p></div>
+                            <div><p><span data-percentage='75' class='skillBar'></span></p>
+                            </div>
+                        </div>
+                        <div class="infobox">
+                            <div>
+                                <p>Javascript</p>
+                            </div>
+                            <div>
+                                <p><span data-percentage='85' class='skillBar'></span></p>
+                            </div>
+                        </div>
+                        <div class="infobox">
+                            <div>
+                                <p>PHP</p>
+                            </div>
+                            <div>
+                                <p><span data-percentage='90' class='skillBar'></span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
                 <div class='skillBox'>
                     <p class='title'>Other</p>
                     <div class='infos'>
-                        <p>Linux - Unix <span data-percentage='80' class='skillBar'></span></p>
-                        <p>C# <span data-percentage='65' class='skillBar'></span></p>
-                        <p>Git <span data-percentage='70' class='skillBar'></span></p>
+                        <div class="infobox">
+                            <div>
+                                <p>Linux - Unix</p>
+                            </div>
+                            <div>
+                                <p><span data-percentage='80' class='skillBar'></span></p>
+                            </div>
+                        </div>
+                        <div class="infobox">
+                            <div>
+                                <p>C#</p>
+                            </div>
+                            <div>
+                                <p><span data-percentage='65' class='skillBar'></span></p>
+                            </div>
+                        </div>
+                        <div class="infobox">
+                            <div>
+                                <p>Git</p>
+                            </div>
+                            <div>
+                                <p><span data-percentage='70' class='skillBar'></span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     //Skills
-    skillBoxs = document.querySelectorAll(".skillBox");
     skillBars = document.querySelectorAll(".skillBar");
 
     skillBars.forEach((skillBar) => {
@@ -97,14 +96,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //on est pas des bg nous
 
-    const music = new Audio("src/others/uwu.mp3")
+    const music = new Audio("src/others/sound.mp3")
     const kya = ['k', 'y', 'a'];
     var textType = []
     let verif = true
 
     document.addEventListener("keydown", function(event) {
 
-        console.log(event.key)
+        //console.log(textType)
 
         if (event.key != 'k' && event.key != 'y' && event.key != 'a') {
             textType = []
@@ -128,7 +127,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 music.play();
                 music.loop = true;
                 music.volume = 0.1
-
             }
         }
     })

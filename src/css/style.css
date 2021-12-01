@@ -135,8 +135,6 @@ section {
     padding: 1rem;
 }
 
-
-/* 
 .btn {
     padding: 0.7rem 3rem;
     background: #333;
@@ -155,44 +153,7 @@ section {
 .btn:hover {
     background: #333;
     transition: ease-in-out;
-    background: linear-gradient(90deg, #f5df4d, #e7a52a);
-} */
-
-.btn {
-    width: 180px;
-    height: 60px;
-    cursor: pointer;
-    background: transparent;
-    border: 1px solid #f8efb0;
-    outline: none;
-    transition: 1s ease-in-out;
-    border-radius: 50px;
-}
-
-svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    fill: none;
-    stroke: #fff;
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
-    transition: 1s ease-in-out;
-}
-
-.btn:hover {
-    transition: 1s ease-in-out;
-    background: #faeb8dde;
-}
-
-.btn:hover svg {
-    stroke-dashoffset: -480;
-}
-
-.btn span {
-    color: white;
-    font-size: 18px;
-    font-weight: 100;
+    background: linear-gradient(90deg, #c2ac20, #e7b52a);
 }
 
 .heading {
@@ -224,6 +185,7 @@ header {
     justify-content: center;
     flex-flow: column;
     text-align: center;
+    padding-top: 35px;
 }
 
 header .user img {
@@ -456,7 +418,7 @@ header .navbar ul li a:hover {
 }
 
 .education .box-container .box {
-    width: 45rem;
+    width: 40rem;
     margin: 4rem 1rem;
     padding-left: 4rem;
     border-left: 0.2rem solid #fff;
@@ -510,6 +472,10 @@ header .navbar ul li a:hover {
     color: var(--yellow);
     padding: 1rem 0;
     font-weight: normal;
+}
+
+#educationTitle {
+    padding-top: 5rem;
 }
 
 
@@ -739,6 +705,34 @@ header .navbar ul li a:hover {
     }
     .skillBar {
         margin-bottom: 5px;
+    }
+}
+
+@media (max-height: 720px) {
+    .navbar ul li {
+        font-size: 50%;
+    }
+    #profilpicture {
+        height: 14rem;
+        width: 14rem;
+    }
+    .user h3 {
+        font-size: 3rem;
+    }
+    #logo {
+        width: 30%;
+    }
+    .user .name {
+        font-size: 3rem;
+    }
+    .user .post {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-height: 614px) {
+    #logo {
+        display: none;
     }
 }
 

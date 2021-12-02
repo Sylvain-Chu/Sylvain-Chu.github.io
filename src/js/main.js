@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
         document.querySelector('.container').style.display = 'block'
     })
 
-
-
     //Button to top smooth
     const btnToTop = document.querySelector(".top");
     btnToTop.addEventListener("click", () => {
@@ -102,9 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let verif = true
 
     document.addEventListener("keydown", function(event) {
-
         //console.log(textType)
-
         if (event.key != 'k' && event.key != 'y' && event.key != 'a') {
             textType = []
             verif = false
@@ -131,12 +127,28 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
 
+    //Animations
 
+    const scrollElements = document.querySelectorAll(".js-scroll");
+
+    handleScrollAnimation = () => {
+        scrollElements.forEach((element) => {
+            if (elementInView(element, 1.25)) {
+                displayScrollElement(element);
+            }
+        })
+    }
+
+    window.addEventListener("scroll", () => {
+        handleScrollAnimation();
+    });
 
 });
 
 
 //FONCTIONS
+
+//HOVER
 function hoverEffect(element1, element2, element3) {
     let box = document.getElementById(element1);
     let title = document.getElementById(element2);
@@ -152,3 +164,17 @@ function hoverEffect(element1, element2, element3) {
         description.style.display = "none"
     });
 }
+
+//ANIMATION
+elementInView = (element, dividend = 1) => {
+    const elementTop = element.getBoundingClientRect().top;
+
+    return (
+        elementTop <=
+        (window.innerHeight || document.documentElement.clientHeight) / dividend
+    );
+};
+
+displayScrollElement = (element) => {
+    element.classList.add("scrolled");
+};

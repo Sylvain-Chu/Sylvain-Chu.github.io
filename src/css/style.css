@@ -537,12 +537,6 @@ header .navbar ul li a:hover {
     border-radius: 1rem;
 }
 
-.portfolio .box-container .box:hover img {
-    transform: scale(1.1);
-    filter: blur(2px);
-    filter: grayscale(100%);
-}
-
 
 /* CONTACT */
 

@@ -50,10 +50,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     //Portfolio image 
-    hoverEffect("box1", "title1", "description1");
-    hoverEffect("box2", "title2", "description2");
-    hoverEffect("box3", "title3", "description3");
-    hoverEffect("box4", "title4", "description4");
+    hoverEffect("box1", "title1", "description1", "img1");
+    hoverEffect("box2", "title2", "description2", "img2");
+    hoverEffect("box3", "title3", "description3", "img3");
+    hoverEffect("box4", "title4", "description4", "img4");
 
 
 
@@ -149,19 +149,28 @@ document.addEventListener("DOMContentLoaded", function() {
 //FONCTIONS
 
 //HOVER
-function hoverEffect(element1, element2, element3) {
+function hoverEffect(element1, element2, element3, element4) {
     let box = document.getElementById(element1);
     let title = document.getElementById(element2);
     let description = document.getElementById(element3);
+    let img = document.getElementById(element4)
 
     box.addEventListener("mouseenter", function(event) {
         title.style.display = "block"
         description.style.display = "block"
+
+        img.style.transform = "scale(1.1)"
+        img.style.filter = "blur(2px)"
+        img.style.filter = "grayscale(100%)"
     });
 
     box.addEventListener("mouseleave", function(event) {
         title.style.display = "none"
         description.style.display = "none"
+
+        img.style.transform = "scale(1)"
+        img.style.filter = "blur(0px)"
+        img.style.filter = "grayscale(0%)"
     });
 }
 

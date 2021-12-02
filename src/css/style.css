@@ -630,6 +630,15 @@ header .navbar ul li a:hover {
 }
 
 
+/* FOOTER */
+
+footer {
+    padding-top: 150px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+
 /* RESPONSIVE  */
 
 @media (max-width: 1200px) {
